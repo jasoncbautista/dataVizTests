@@ -4,7 +4,7 @@
             video {
                 position: absolute;
                 top: 0px;
-                left 0px:
+                left: 0px;
 
                 z-index: 1;
                 width: 100%;
@@ -28,8 +28,6 @@
                 height: 50px;
                 z-index: 10;
             }
-
-
 
 
             .button{
@@ -64,8 +62,17 @@
                     }
                     });
 
+            var lightsOff= false;
             $(".overlay2 .button").click(function(){
-                console.log("clicked");
+                console.log("clicked lights off");
+                lightsOff = !lightsOff;
+                if(lightsOff ){
+                    $("body").css("background", "black");
+                } else {
+                    
+                    $("body").css("background", "white");
+                }
+
             });
 
 		});
@@ -84,7 +91,7 @@
         </div>
 
         <div class="overlay2">
-            <button class="button"> Click me to console log</button>
+            <button class="button"> Lights: On / Off </button>
         </div>
 
 
