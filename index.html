@@ -3,18 +3,39 @@
         <style>
             video {
                 position: absolute;
-                top: 100px;
+                top: 0px;
                 left 0px:
+
                 z-index: 1;
+                width: 100%;
             }
             .overlay{
-                color: red;
+                display: none;
+                color: white;
                 position: absolute;
                 top: 200px;
                 left: 20px;
                 width: 100px;
                 height: 50px;
                 z-index: 9;
+            }
+            .overlay2{
+                color: white;
+                position: absolute;
+                top: 300px;
+                right: 20px;
+                width: 100px;
+                height: 50px;
+                z-index: 10;
+            }
+
+
+
+
+            .button{
+                background: #eee;
+                border-radius: 5px;
+                color: black;
             }
         </style>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
@@ -25,24 +46,25 @@
 
 			    video.onended = function(e) {
 			      /*Do things here!*/
-			      alert('wasssa');
+			      alert('wasssa video is over');
 			    };
 
                 var pauseVid = true;
                 video.addEventListener("timeupdate", function(){
-                    console.log(this.currentTime);
                     if(this.currentTime >= 3 && pauseVid) {
                     this.pause();
-                    //todo: set timeout and play again:
+                    $(".overlay").show();
                     setTimeout(function(){
                         
+                    $(".overlay").hide();
+                    
                         pauseVid = false;
                         video.play();
                         }, 3000);
                     }
                     });
 
-            $(".overlay button").click(function(){
+            $(".overlay2 .button").click(function(){
                 console.log("clicked");
             });
 
@@ -58,8 +80,11 @@
   Your browser does not support the video tag.
 </video>
         <div class="overlay">
-            <h1> I see you paused me </h1>
-            <button> Click me to console log</button>
+            <h1 > pausing for 1, 2 3..</h1>
+        </div>
+
+        <div class="overlay2">
+            <button class="button"> Click me to console log</button>
         </div>
 
 
