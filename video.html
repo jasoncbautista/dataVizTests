@@ -58,7 +58,7 @@
              var cssRule = "rect({top}px,30000px,30000px,0px)".replace("{top}", initialTop)
               $(".clipMe").css("clip", cssRule);
               console.log(cssRule);
-              initialTop-=1;
+              initialTop-=3;
               if (progress < 5000) {
                 requestAnimationFrame(step);
                 }
@@ -66,7 +66,7 @@
 
             setTimeout(function(){
                 requestAnimationFrame(step);
-            }, 2500);
+            }, 3000);
             /*
 
 			 var video = document.getElementsByTagName('video')[0];
