@@ -3,10 +3,10 @@
         <style>
          .clipMe {
               position: absolute;
-              top: 0px;
-              left: 0px;
+              top: 200px;
+              left: 150px;
               z-index: 100;
-              clip:rect(80px,30000px,30000px,0px);
+              clip:rect(00px,30000px,30000px,0px);
           } 
                 video {
                 position: absolute;
@@ -64,7 +64,9 @@
                 }
             }
 
-            requestAnimationFrame(step);
+            setTimeout(function(){
+                requestAnimationFrame(step);
+            }, 2500);
             /*
 
 			 var video = document.getElementsByTagName('video')[0];
@@ -108,7 +110,6 @@
 	<body>
 	
     <img class="clipMe" src="t.png"/>
-<!--
 		 <video muted autoplay>
   <source src="http://media.w3.org/2010/05/sintel/trailer.mp4" type="video/mp4">
   <source src="http://media.w3.org/2010/05/sintel/trailer.webm" type="video/ogg">
@@ -121,7 +122,6 @@
         <div class="overlay2">
             <button class="button"> Lights: On / Off </button>
         </div>
-!-->
 
 	</body>
 </html>
