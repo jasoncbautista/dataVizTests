@@ -1,7 +1,14 @@
 <html>
 	<head>
         <style>
-            video {
+         .clipMe {
+              position: absolute;
+              top: 0px;
+              left: 0px;
+              z-index: 100;
+              clip: rect(10px, 290px, 190px, 10px);
+          } 
+                video {
                 position: absolute;
                 top: 0px;
                 left: 0px;
@@ -80,6 +87,7 @@
 	</head>
 	<body>
 	
+    <img class="clipMe" src="t.png"/>
 
 		 <video muted autoplay>
   <source src="http://media.w3.org/2010/05/sintel/trailer.mp4" type="video/mp4">
