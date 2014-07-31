@@ -6,7 +6,7 @@
               top: 0px;
               left: 0px;
               z-index: 100;
-              clip: rect(10px, 290px, 190px, 10px);
+              clip:rect(80px,30000px,30000px,0px);
           } 
                 video {
                 position: absolute;
@@ -45,13 +45,14 @@
         </style>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 		<script type="text/javascript" >
+
+        /*
 		$(function(){
 
 			 var video = document.getElementsByTagName('video')[0];
 
 			    video.onended = function(e) {
-			      /*Do things here!*/
-			      alert('wasssa video is over');
+                 console.log("ended");
 			    };
 
                 var pauseVid = true;
@@ -83,12 +84,13 @@
             });
 
 		});
+*/
 		</script>
 	</head>
 	<body>
 	
     <img class="clipMe" src="t.png"/>
-
+<!--
 		 <video muted autoplay>
   <source src="http://media.w3.org/2010/05/sintel/trailer.mp4" type="video/mp4">
   <source src="http://media.w3.org/2010/05/sintel/trailer.webm" type="video/ogg">
@@ -101,7 +103,7 @@
         <div class="overlay2">
             <button class="button"> Lights: On / Off </button>
         </div>
-
+!-->
 
 	</body>
 </html>
