@@ -1,7 +1,7 @@
 
         
-    var grayPoints = 0.8;
-    var redPoints = 1;
+    var grayPoints = 0.55;
+    var redPoints = 1.0;
 
 		$(function(){
             var start = null;
@@ -12,19 +12,22 @@
               if (start === null) start = timestamp;
               progress = timestamp - start;
 
-             var cssRule = "rect({top}px,3000px,30000px,0px)".replace("{top}", initialTop * redPoints)
+
+             if (initialTop >=  (1 - redPoints) * 300){
+             var cssRule = "rect({top}px,3000px,30000px,0px)".replace("{top}", initialTop  )
               $(".redbar").css("clip", cssRule);
               //console.log(cssRule);
+              }
 
 
 
-             if (initialTop >  grayPoints * 200){
+             if (initialTop >  (1 - grayPoints) * 300){
                 console.log("wtf");
                var cssRule = "rect({top}px,3000px,30000px,0px)".replace("{top}", initialTop );
                 $(".graybar").css("clip", cssRule);
               }
               //console.log(cssRule);
-              initialTop-=2;
+              initialTop-=3;
 
 
 
