@@ -4,6 +4,15 @@
     var redPoints = 1.0;
 
 		$(function(){
+            $(".redbar").mouseover(function(){
+              $(".rightCard").show();
+            });
+             $(".redbar").mouseout(function(){
+              $(".rightCard").hide();
+            });
+            
+            
+
             var start = null;
 
             var initialTop  = 300;
@@ -39,7 +48,7 @@
 
             setTimeout(function(){
                 requestAnimationFrame(step);
-            }, 3200);
+            }, 3500);
           
 
 			 var video = document.getElementsByTagName('video')[0];
@@ -50,6 +59,11 @@
 
                 var pauseVid = true;
                 video.addEventListener("timeupdate", function(){
+
+                    if(this.currentTime >= 2.9 && pauseVid) {
+                      $(".rightCard").fadeIn(1800);
+
+                    }
                     if(this.currentTime >= 3.0 && pauseVid) {
                     this.pause();
                     // $(".overlay").show(); // showing the text

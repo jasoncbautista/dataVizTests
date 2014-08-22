@@ -4,6 +4,30 @@
         body{
           background: #43494e;
         }
+        .athleteCard {
+          display: none;
+          background: white;
+          color: black;
+          opacity: 0.7;
+          position: absolute;
+          z-index: 9999999;
+
+
+        }
+        .athleteCard img{
+
+             border-radius: 15px;
+
+        }
+        .rightCard{
+          top: 50px;
+          right: 10%;
+          padding: 10px;
+          min-width: 100px;
+             border-radius: 10px;
+
+        }
+
          .clipMe {
               position: absolute;
               top: 200px;
@@ -73,6 +97,13 @@
 	</head>
 	<body>
 	
+
+  <div class="athleteCard rightCard">
+    <img width="50px" src="joe.jpg"/>
+    <h3> Joe Lauzon </h3>
+    <h4> Stats: 23.3 </h4>
+
+  </div>
 
     <img class="clipMe redbar" src="redbar.png"/>
     <img class="clipMe graybar" src="graybar.png"/>
