@@ -8,10 +8,13 @@
               var progress;
               if (start === null) start = timestamp;
               progress = timestamp - start;
-             var cssRule = "rect({top}px,30000px,30000px,0px)".replace("{top}", initialTop)
+
+             var cssRule = "rect({top}px,3000px,30000px,0px)".replace("{top}", initialTop)
               $(".redbar").css("clip", cssRule);
               console.log(cssRule);
               initialTop-=3;
+
+
               if (progress < 5000) {
                 requestAnimationFrame(step);
                 }
@@ -19,7 +22,7 @@
 
             setTimeout(function(){
                 requestAnimationFrame(step);
-            }, 3000);
+            }, 3200);
           
 
 			 var video = document.getElementsByTagName('video')[0];
@@ -30,13 +33,13 @@
 
                 var pauseVid = true;
                 video.addEventListener("timeupdate", function(){
-                    if(this.currentTime >= 3 && pauseVid) {
+                    if(this.currentTime >= 3.0 && pauseVid) {
                     this.pause();
-                    $(".overlay").show();
+                    // $(".overlay").show(); // showing the text
                     
                     setTimeout(function(){
                         
-                    $(".overlay").hide();
+                    // $(".overlay").hide();
                     
                         // pauseVid = false;
                         //video.play();
