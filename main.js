@@ -48,7 +48,7 @@
 
             setTimeout(function(){
                 requestAnimationFrame(step);
-            }, 3500);
+            }, 3800);
           
 
 			 var video = document.getElementsByTagName('video')[0];
@@ -59,6 +59,12 @@
 
                 var pauseVid = true;
                 video.addEventListener("timeupdate", function(){
+
+
+                    if(this.currentTime >= 2.9 && pauseVid) {
+                      $(".leftCard").fadeIn(1800);
+
+                    }
 
                     if(this.currentTime >= 2.9 && pauseVid) {
                       $(".rightCard").fadeIn(1800);

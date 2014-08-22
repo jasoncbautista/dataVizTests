@@ -13,18 +13,27 @@
           z-index: 9999999;
 
 
+           top: 300px;
         }
         .athleteCard img{
 
              border-radius: 15px;
 
         }
+
+        .leftCard{
+          left: 10%;
+          padding: 10px;
+          min-width: 100px;
+             border-radius: 5px;
+
+        }
+
         .rightCard{
-          top: 50px;
           right: 10%;
           padding: 10px;
           min-width: 100px;
-             border-radius: 10px;
+             border-radius: 5px;
 
         }
 
@@ -96,7 +105,14 @@
     <script src="main.js"></script>
 	</head>
 	<body>
-	
+	 <div class="athleteCard leftCard">
+    <img width="50px" src="dude.jpg"/>
+    <h3> Josh Barnett</h3>
+    <h4> Stats: 13.3 </h4>
+
+  </div>
+
+  
 
   <div class="athleteCard rightCard">
     <img width="50px" src="joe.jpg"/>
@@ -104,6 +120,8 @@
     <h4> Stats: 23.3 </h4>
 
   </div>
+
+
 
     <img class="clipMe redbar" src="redbar.png"/>
     <img class="clipMe graybar" src="graybar.png"/>
