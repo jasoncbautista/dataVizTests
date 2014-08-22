@@ -11,8 +11,17 @@
 
              var cssRule = "rect({top}px,3000px,30000px,0px)".replace("{top}", initialTop)
               $(".redbar").css("clip", cssRule);
-              console.log(cssRule);
+              //console.log(cssRule);
               initialTop-=3;
+
+
+
+             var cssRule = "rect({top}px,3000px,30000px,0px)".replace("{top}", initialTop)
+              $(".graybar").css("clip", cssRule);
+              //console.log(cssRule);
+              initialTop-=3;
+
+
 
 
               if (progress < 5000) {
